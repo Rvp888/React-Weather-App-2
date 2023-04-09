@@ -6,14 +6,21 @@ import { UseWeatherAPPContext } from '../../Context/Context';
 
 
 export default function ChooseStateComponents() {
-    console.log('UseWeatherAPPContext',UseWeatherAPPContext());
 
     const {state:{city},dispatch} = UseWeatherAPPContext();
+    console.log('UseWeatherAPPContext',UseWeatherAPPContext(),city);
+
+    const handleChange = (e) => {
+        const selectedCity = cities.filter((city)=>{
+           return  city.city === e.target.value
+        })[0]
+        console.log(selectedCity);
+    }
 
   return (
     <>
       <div className='stateWrap'>
-        <select className='stateMenu'>
+        <select className='stateMenu' defaultValue={city} onChange={handleChange} >
             {
                 cities && cities.length > 0  && cities.map((city) => {
                     return (
