@@ -1,10 +1,15 @@
 
 import React from 'react';
 import cities from "../../Data/in.json";
+import { UseWeatherAPPContext } from '../../Context/Context';
 
 
 
 export default function ChooseStateComponents() {
+    console.log('UseWeatherAPPContext',UseWeatherAPPContext());
+
+    const {state:{city},dispatch} = UseWeatherAPPContext();
+
   return (
     <>
       <div className='stateWrap'>

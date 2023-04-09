@@ -8,7 +8,17 @@ const weatherAPPContext = createContext();
 const WeatherAPPProvider = ({children}) => {
 
     const [state, dispatch] = useReducer(WeatherReducer, {
-        city: "",
+        city: {
+            "city": "Delhi", 
+            "lat": "28.6600", 
+            "lng": "77.2300", 
+            "country": "India", 
+            "iso2": "IN", 
+            "admin_name": "Delhi", 
+            "capital": "admin", 
+            "population": "29617000", 
+            "population_proper": "16753235"
+          },
         current: "",
         daily: "",
     })
@@ -22,4 +32,8 @@ const WeatherAPPProvider = ({children}) => {
     )
 }
 
-export default weatherAPPContext;
+export default WeatherAPPProvider;
+
+export const UseWeatherAPPContext = () => {
+    return useContext(weatherAPPContext);
+}
