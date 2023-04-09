@@ -11,7 +11,11 @@ export default function ChooseStateComponents() {
         <select className='stateMenu'>
             {
                 cities && cities.length > 0  && cities.map((city) => {
-                    
+                    return (
+                        <option key={`${city.population}${city.lat}`} value={city.city}>
+                            {city.city} - {city.admin_name}
+                        </option>
+                    )
                 })
             }
         </select>
