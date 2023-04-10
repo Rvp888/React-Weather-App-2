@@ -1,5 +1,5 @@
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { UseWeatherAPPContext } from "../../Context/Context";
 import SingleCardComponents from "../SingleCard/Index";
 
@@ -9,7 +9,7 @@ const WeekInfoCardComponents = () => {
     const [ selectedCard, setSelectedCard ] = useState(0);
 
     const {state: {daily}, dispatch} = UseWeatherAPPContext();
-    console.log("daily", daily);
+    // console.log("daily", daily);
 
     const updateCurrent = () => {
         return (
@@ -19,6 +19,10 @@ const WeekInfoCardComponents = () => {
             })
         )
     }
+
+    useEffect(() => {
+        updateCurrent();
+    }, [daily, selectedCard]);
 
 
     return (

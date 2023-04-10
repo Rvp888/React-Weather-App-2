@@ -2,6 +2,7 @@
 import React from 'react';
 import ChooseStateComponents from './ChooseState/Index';
 import WeekInfoCardComponents from './WeekInfoCard/Index';
+import HUMIDITYComponents from './HUMIDITY/Index';
 
 
 export default function HomeComponents() {
@@ -12,8 +13,8 @@ export default function HomeComponents() {
             Left HomeComponents
             <div className='rightSide'>
                 <ChooseStateComponents />
-                <WeekInfoCardComponents /> <br />
-                3.Humidity
+                <WeekInfoCardComponents /> 
+                <HUMIDITYComponents />
             </div>
         </div>
       </div>
