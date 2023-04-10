@@ -15,12 +15,17 @@ const HUMIDITYComponents = () => {
     }
 
     return (
-        <div className="humidityWrap">
-            <div className="humidityData">
-                <div className="title"></div>
-                <div className="value"></div>
-            </div>
-        </div>
+        <>
+            {
+                current ? <div className="humidityWrap">
+                    <div className="humidityData">
+                        <div className="title">UV Index</div>
+                        <div className="value">{current.humidity} %</div>
+                    </div>
+                </div> : ""
+            }
+        </>
+        
     )
 }
 
