@@ -30,6 +30,9 @@ const LeftComponents = () => {
             <div className="leftWrap">
                 <div className="dateWrap">
                     <h2>{WEEKDAYS[weekdayindex]}</h2>
+                    <span className="dateDay">
+                        {dayjs.unix(current.dt).format("DD MMM YYYY")}
+                    </span>
                 </div>
             </div>
         </>
