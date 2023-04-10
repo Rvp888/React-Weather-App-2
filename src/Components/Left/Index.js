@@ -33,6 +33,9 @@ const LeftComponents = () => {
                     <span className="dateDay">
                         {dayjs.unix(current.dt).format("DD MMM YYYY")}
                     </span>
+                    <span className="locationName">
+                        {city.city} - {city.admin_name} - {city.country}
+                    </span>
                 </div>
             </div>
         </>
