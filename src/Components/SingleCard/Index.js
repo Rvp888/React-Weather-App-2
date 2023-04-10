@@ -23,7 +23,15 @@ const SingleCardComponents = ( {item, className, onClick} ) => {
     return (
         <>
             <li key={item.moonrise} className={className} onClick={onClick}>
-                <img alt="rohit" className="day-icon" src={`http://openweathermap.org/img/wn/${item.weather[0]}@2x.png`} />
+                <img alt="rohit" className="day-icon" src={`http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`} />
+
+                <span className="day-name">
+                    {WEEKDAYS[weekdayindex].slice(0,3)}
+                </span>
+
+                <span className="day-temp">
+                    {Math.round(item.temp.max)}°C
+                </span>
             </li>
         </>
     )
