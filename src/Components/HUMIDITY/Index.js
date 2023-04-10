@@ -29,8 +29,13 @@ const HUMIDITYComponents = () => {
                     </div>
 
                     <div className="humidityData">
-                        <div className="title">UV Index</div>
-                        <div className="value">{current.humidity} %</div>
+                        <div className="title">Wind</div>
+                        <div className="value">{Math.round(current.wind_speed)} km/h</div>
+                    </div>
+                    
+                    <div className="humidityData">
+                        <div className="title">{city.city} - {city.admin_name} - Population</div>
+                        <div className="value">{parseFloat(city.population).toLocaleString('en')}</div>
                     </div>
                 </div> : ""
             }
