@@ -20,6 +20,16 @@ const HUMIDITYComponents = () => {
                 current ? <div className="humidityWrap">
                     <div className="humidityData">
                         <div className="title">UV Index</div>
+                        <div className="value">{Math.round(current.uvi)} ({uvLevel(Math.round(current.uvi))})</div>
+                    </div>
+
+                    <div className="humidityData">
+                        <div className="title">Humidity</div>
+                        <div className="value">{current.humidity} %</div>
+                    </div>
+
+                    <div className="humidityData">
+                        <div className="title">UV Index</div>
                         <div className="value">{current.humidity} %</div>
                     </div>
                 </div> : ""
