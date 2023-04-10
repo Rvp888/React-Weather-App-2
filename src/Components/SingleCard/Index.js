@@ -15,7 +15,7 @@ const SingleCardComponents = ( {item, className, onClick} ) => {
         "Thursday",
         "Friday",
         "Saturday",
-    ]
+    ];
 
     const weekdayindex = dayjs.unix(item.dt).day();
         
