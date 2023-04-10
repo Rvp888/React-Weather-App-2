@@ -16,7 +16,10 @@ const HUMIDITYComponents = () => {
 
     return (
         <div className="humidityWrap">
-            hello
+            <div className="humidityData">
+                <div className="title"></div>
+                <div className="value"></div>
+            </div>
         </div>
     )
 }
