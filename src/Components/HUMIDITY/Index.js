@@ -6,7 +6,13 @@ import { UseWeatherAPPContext } from "../../Context/Context";
 const HUMIDITYComponents = () => {
 
     let { state: { current, city } } = UseWeatherAPPContext();
-    console.log(current, city);
+    // console.log(current, city);
+    const uvLevel = (uvLevel) => {
+        if(uvLevel <= 2) return "Low";
+        if(uvLevel <= 5) return "Medium";
+        if(uvLevel <= 7) return "High";
+        if(uvLevel > 7) return "Very High";
+    }
 
     return (
         <div className="humidityWrap">
